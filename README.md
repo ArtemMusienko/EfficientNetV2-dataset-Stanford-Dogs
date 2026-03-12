@@ -2,15 +2,18 @@
 
 ## EfficientNetV2 + dataset Stanford Dogs
 
-**EfficientNetV2** — это усовершенствованное семейство нейронных сетей для компьютерного зрения, разработанное Google как развитие EfficientNet. Оно сочетает новые типы сверточных блоков (Fused-MBConv) и стратегию прогрессивного обучения, что делает тренировку моделей значительно быстрее, а сами модели — более точными и эффективными по сравнению с предыдущими версиями. Эти модели широко используются как готовые основы для задач классификации, детекции и сегментации изображений.
+ [![ru](https://img.shields.io/badge/README_на_русском-2A2C39?style=for-the-badge&logo=github&logoColor=white)](README.ru.md) 
 
-Данное решение демонстрирует использование тонкой настройки модели с помощью **EfficientNetV2** на примере набора данных **[Stanford Dogs](https://storage.yandexcloud.net/academy.ai/stanford_dogs.zip)**. 
+**EfficientNetV2** is an advanced family of neural networks for computer vision developed by Google as an evolution of EfficientNet. It combines new types of convolutional blocks (Fused-MBConv) and a progressive training strategy, making model training significantly faster and more accurate and efficient than previous versions. These models are widely used as ready-made bases for image classification, detection, and segmentation tasks.
 
-Для достижения более лучшего результата были реализованы 3 callbacks: **EarlyStopping**, **ModelCheckpoint** и **ReduceLROnPlateau**. Также была применена техника аугментация, которая позволила достичь высоких результатов. Для ускорения вычислений на **GPU** будем использовать технику `mixed precision` (смешанной точности).
+This solution demonstrates the use of fine-tuning the model using **EfficientNetV2** using the **[Stanford Dogs](https://storage.yandexcloud.net/academy.ai/stanford_dogs.zip)** dataset as an example.
 
-Финальная точность после дообучения: 
- - *Обучающая* выборка: 0.79;
- - *Валидационная* выборка: 0.87;
- - *Тестовая* выборка: 0.86.
+ To achieve better results, 3 callbacks were implemented: **EarlyStopping**, **ModelCheckpoint**, and **ReduceLROnPlateau**. Augmentation techniques were also used to achieve high results. To speed up calculations on the **GPU**, we will use the `mixed precision` technique (mixed precision).
 
-> Настоятельно рекомендую использовать **графический ускоритель T4** или лучше!
+Final accuracy after fine-tuning:
+
+- *Training* sample: 0.79;
+- *Validation* sample: 0.87;
+- *Test* sample: 0.86.
+
+> I strongly recommend using a **T4 graphics accelerator** or better!
